@@ -42,11 +42,14 @@ SR
 </body>
 <script>
 var rr,sr= true;
-if(localStorage.lastname==false)
-localStorage.setItem("lastname", "0");
+if (localStorage.clickcount) {
+    localStorage.clickcount = Number(localStorage.clickcount)+1;
+  } else {
+    localStorage.setItem("lastname", "0");
+  }
 
 document.getElementById("des88").innerHTML = localStorage.getItem("lastname");
-setInterval( function (){des();},6000);
+setInterval( function (){des();},60000);
 function des(){
 if(sr){
 rr = localStorage.getItem("lastname");
@@ -62,7 +65,7 @@ function sr2n(){
 en++;
 var srr = document.getElementById("srr");
 if(en%2==0){
-srr.style.backgroundColor = "rgb(200,255,200)";
+srr.style.backgroundColor = "rgb(200,245,200)";
 srr.innerHTML ="SR";
 sr=false;
 }else{
