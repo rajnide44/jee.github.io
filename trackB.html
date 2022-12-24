@@ -51,12 +51,12 @@ if (localStorage.clickcount) {
   }
 
 document.getElementById("des88").innerHTML = localStorage.getItem("lastname");
-setInterval( function (){des();},5000);
+setInterval( function (){des();},60000);
 function des(){
 if(sr){
 rr = localStorage.getItem("lastname");
 rr= parseInt(rr,10);
-rr= rr + 100;
+rr= rr + 6.8;
 localStorage.setItem("lastname", rr);
 document.getElementById("des88").innerHTML = localStorage.getItem("lastname");
 }
